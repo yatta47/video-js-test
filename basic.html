@@ -12,23 +12,54 @@
     <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 
     <style>
+        .btn-square {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background: #668ad8;
+            /*ボタン色*/
+            color: #FFF;
+            border-bottom: solid 4px #627295;
+            border-radius: 3px;
+        }
 
+        .btn-square:active {
+            /*ボタンを押したとき*/
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+            /*下に動く*/
+            border-bottom: none;
+            /*線を消す*/
+        }
+
+        .box {
+            float: left;
+            width: 200px;
+        }
     </style>
 
 </head>
 
 <body>
-    <video-js id=example-video width=960 height=540 class="vjs-default-skin" controls>
+    <video-js id="video1" width=960 height=540 class="vjs-default-skin" controls>
         <source src="http://192.168.33.70:1935/live/testLive/playlist.m3u8?DVR" type="application/x-mpegURL">
     </video-js>
 
+    <div id="local" class="box">
+        <a href="#" class="btn-square">local Movie</a>
+    </div>
+
+    <div id="other" class="box">
+        <a href="#" class="btn-square">other Movie</a>
+    </div>
+    <div id="4th" class="box">
+        <a href="#" class="btn-square">4th Movie</a>
+    </div>
+
     <script src="https://unpkg.com/video.js/dist/video.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
-    <script>
-        var player = videojs('example-video');
-        player.play();
-    </script>
 
+    <script type="text/javascript" src="./js/basic.js"></script>
 </body>
 
 </html>
