@@ -2,11 +2,12 @@ var player = videojs('video1');
 
 player.ready(function () {
     player = this;
+    player.dvr();
     player.play();
 });
 
 function getDuration() {
-    var duration = player.duration();
+    var duration = this.player.duration();
     var current = this.player.currentTime();
     console.log("duration : " + duration);
     console.log("current : " + current);
@@ -47,9 +48,14 @@ document.getElementById("4th").onclick = function () {
 
     // player.muted(true);
     player.volume(0.1);
+    player.removeClass('vjs-dvr');
     player.load();
     player.play();
 
     console.log(player);
+    getDuration();
+}
+
+document.getElementById("current").onclick = function () {
     getDuration();
 }

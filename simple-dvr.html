@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <script data-main="js/main.js" src="js/require.js"></script>
-
     <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
     <!-- <link href="js/videojs-dvr/videojs-dvr.css" rel="stylesheet"> -->
-    <link href="js/videojs-dvrseekbar/videojs-dvrseekbar.css" rel="stylesheet">
+    <!-- <link href="js/videojs-dvrseekbar/videojs-dvrseekbar.css" rel="stylesheet"> -->
 
     <style>
         .btn-square {
@@ -57,11 +55,9 @@
 
 <body>
     <video-js id="video_dvr" width=960 height=540 class="vjs-default-skin" controls>
-        <source src="http://192.168.33.70:1935/live/testLive/playlist.m3u8?DVR" type="application/x-mpegURL">
+        <source src="materials/sunshine_4th.mp4" type="video/mp4">
     </video-js>
     <br>
-    <video-js id="video_normal" width=960 height=540 class="vjs-default-skin" controls>
-    </video-js>
 
     <div id="local" class="box">
         <a href="#" class="btn-square">local Movie</a>
@@ -79,13 +75,14 @@
     </div>
 
 
-    <script src="https://unpkg.com/video.js/dist/video.js"></script>
+    <!-- <script src="https://unpkg.com/video.js/dist/video.js"></script> -->
+    <script type="text/javascript" src="./video-js-7.5.4/video.js"></script>
     <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
     <!-- <script type="text/javascript" src="./js/videojs-dvr/videojs-dvr.js"></script> -->
     <!-- <script type="text/javascript" src="./js/videojs-dvrseekbar/videojs-dvrseekbar.js"></script> -->
 
     <!-- <script type="text/javascript" src="./js/basic.js"></script> -->
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/simple-dvr.js"></script>
 </body>
 
 </html>
